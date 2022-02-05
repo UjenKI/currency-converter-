@@ -8,7 +8,7 @@ let initialState = {
     exchangeRate: {},
     selectOptions: [],
     rateForElem: [],
-    baseCurrency: 'USD',
+    baseCurrency: '',
     isFetching: true
 }
 
