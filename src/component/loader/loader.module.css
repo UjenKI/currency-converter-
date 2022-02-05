@@ -1,0 +1,8 @@
+.loaderWrapper {
+    width: 100%;
+    max-height: 200px;
+}
+
+.loaderWrapper img {
+    height: 100%;
+}

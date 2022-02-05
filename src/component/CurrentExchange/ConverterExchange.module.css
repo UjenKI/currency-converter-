@@ -1,0 +1,82 @@
+table {
+    width: 100%;
+}
+tr{
+    border-bottom: 1px solid gray;
+}
+td {
+    padding: 10px;
+}
+td:nth-child(1){
+    border-right: 1px solid gray;
+}
+
+h1{
+    margin: 10px 0 30px;
+}
+.exchange__rate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.exchangeRate__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+select {
+    margin-left: 10px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-height: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+.list__item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.list__item div{
+    width: 260px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list__item p {
+    font-size: 16px;
+    color: #4b4a4a;
+    font-weight: 700;
+}
+.list__item p span{
+    color: #acacac;
+}
+.list__item div:nth-child(1){
+    border-right: 1px solid gray;
+}
+button.refresh__exchange {
+    padding: 15px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #fff;
+    background: linear-gradient(rgb(109, 215, 230), rgb(17, 169, 189));
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in;
+}
+.exchange__rate__list{
+    display: flex;
+    flex-direction: column;
+}

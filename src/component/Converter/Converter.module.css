@@ -1,0 +1,65 @@
+.converter__wrapper {
+    padding: 50px;
+}
+.converter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.converter__item__error{
+    display: block;
+    position: relative;
+}
+.converter__item__error::after{
+    content: 'validation error';
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease-in;
+}
+.converter__item select,
+.converter__item__error select{
+    margin-right: 10px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-height: 36px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.converter__item input,
+.converter__item__error input {
+    padding: 5px 22px;
+    border: 1px solid #D4CCE0;
+    background: #F4F2F5;
+    border-radius: 4px;
+    color: #19003A;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    transition: 0.3s ease-in;
+}
+.converter__item input.validate_error,
+.converter__item__error input.validate_error{
+    border: 2px solid red;
+}
+.exchange__btn {
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+    background: rgb(77, 120, 201);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
