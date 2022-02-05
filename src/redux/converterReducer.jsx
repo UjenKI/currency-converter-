@@ -61,11 +61,9 @@ const converterPageReducer = (state = initialState, action) => {
 
             const rates = action.options;
 
-            console.log(rates);
-
             let options = []
 
-            for(let key in rates.conversion_rates){
+            for(let key in rates){
                 options.push(key);
             }
 

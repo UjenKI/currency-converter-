@@ -5,8 +5,8 @@ import style from './Converter.module.css';
 const Converter = (props) => {
 
     let state = props.converterPage;
-
-    let options = state.selectOptions.map(item => <option key={item.id}>{item}</option>);
+console.log(props)
+    // let options = state.selectOptions.map(item => <option key={item.id}>{item}</option>);
 
     const resetData = () => {
         props.updateInputValue('')
@@ -35,7 +35,7 @@ const Converter = (props) => {
         if(splitValue[1].length < 3 && splitValue[3].length < 3) {
             return;
         } else {
-            const arr = state.selectOptions;
+            const arr = props.baseCurrencyPage.baseSelectOptions;
             const res = splitValue.map((item) => {
                 let number = parseInt(item);
                 return number
@@ -58,11 +58,8 @@ const Converter = (props) => {
         props.updateOutputValue(outputAmountMoney);
     }
 
-    let getProps = () => {
-        console.log(props)
-    }
-
     const exchangeAmountMoney = () => {
+        console.log(props)
 
         if ( state.inputAmountMoney === '' || state.inputAmountMoney === null ||
              state.inputCurrency === '' || state.inputCurrency === null ||
@@ -82,10 +79,6 @@ const Converter = (props) => {
                 props.updateOutputValue(res);
             }
         }
-
-
-
-        getProps()
 
     }
 

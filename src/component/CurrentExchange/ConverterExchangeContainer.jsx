@@ -12,7 +12,7 @@ class ConverterExchangeContainer extends Component {
         console.log(this.props)
         axios.get(`https://v6.exchangerate-api.com/v6/7120f8b4af81731db296136f/latest/${this.props.exchangeRatePage.baseCurrency}`)
             .then(res => {
-                // console.log(res.data)
+                console.log(res.data)
                 this.props.setExchangeRate(res.data)
                 this.props.setSelectOptions(res.data)
                 this.props.setRateForElem(res.data)

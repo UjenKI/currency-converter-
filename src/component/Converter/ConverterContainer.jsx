@@ -2,18 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
-import Converter from './Converter';
+// import Converter from './Converter';
+import ConverterPage from './ConverterPage';
 
 import { changeValidateErrorAC, changeToggleFetchingAC, updateOutputValueAC, updateInputValueAC, setExchangeRateAC, setInputCurrencyAC, setOutputCurrencyAC, setSelectOptionsAC} from '../../redux/converterReducer';
 
 class ConverterContainer extends Component {
 
     componentDidMount(){
-        axios.get(`https://v6.exchangerate-api.com/v6/7120f8b4af81731db296136f/latest/${this.props.converterPage.inputCurrency}`)
-        // axios.get('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+        axios.get(`https://v6.exchangerate-api.com/v6/7120f8b4af81731db296136f/latest/${this.props.baseCurrencyPage.baseCurrencyExchange}`)
             .then(res => {
+                console.log(res.data)
                 this.props.setExchangeRate(res.data);
-                this.props.setSelectOptions(res.data);
+                this.props.setSelectOptions(res.data.conversion_rates);
                 // console.log(this.props)
             })
     }
@@ -29,14 +30,15 @@ class ConverterContainer extends Component {
 
     render(){
         return (
-            <Converter {...this.props}/>
+            <ConverterPage {...this.props}/>
         )
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        converterPage: state.converterPage
+        converterPage: state.converterPage,
+        baseCurrencyPage: state.baseCurrencyPage
     }
 }
 

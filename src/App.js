@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './component/Header/Header';
 import ConverterContainer from './component/Converter/ConverterContainer';
 import ConverterExchangeContainer from './component/CurrentExchange/ConverterExchangeContainer';
+// import BaseCurrencyContainer from './component/BaseCurrency/BaseCurrencyContainer';
 
 import './App.css';
 
@@ -23,6 +24,7 @@ const App = () => {
         </div>
       </div>
     </BrowserRouter>
+    // <BaseCurrencyContainer/>
   )
 }
 

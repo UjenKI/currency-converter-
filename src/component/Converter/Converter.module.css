@@ -54,7 +54,7 @@
     width: 80px;
     height: 80px;
     margin: 0 10px;
-    background: rgb(77, 120, 201);
+    background: linear-gradient(rgb(109, 215, 230), rgb(17, 169, 189));
     border-radius: 50%;
     border: none;
     outline: none;
