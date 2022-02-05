@@ -1,13 +1,11 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
-import Loader from '../loader';
 
 import style from './ConverterExchange.module.css';
 
 const ConverterExchange = (props) => {
 
     const state = props.exchangeRatePage;
-    // const loader = state.isFetching ? <Loader /> : null;
 
     const rateItem = state.rateForElem.map(item => <LazyLoad height={200}><li className={style.list__item}><div><p><span>1</span> {state.baseCurrency}</p></div><div><p><span>{item[1]}</span> {item[0]}</p></div></li></LazyLoad>)
     
@@ -29,7 +27,7 @@ const ConverterExchange = (props) => {
                     </select>
                 </div>
             </div>
-            <button className={style.refresh__exchange}>Refresh exchange rate</button>
+            <p className={style.prompt}>"scroll for load more..."</p>
             <div className={style.rates__list}>
                 <ul>
                     {rateItem}

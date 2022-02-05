@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Header from './component/Header/Header';
-import ConverterContainer from './component/Converter/ConverterContainer';
-import ConverterExchangeContainer from './component/CurrentExchange/ConverterExchangeContainer';
-// import BaseCurrencyContainer from './component/BaseCurrency/BaseCurrencyContainer';
-
 import './App.css';
+// import ConverterContainer from './component/Converter/ConverterContainer';
+const ConverterContainer = React.lazy(() => import('./component/Converter/ConverterContainer'));
+// import ConverterExchangeContainer from './component/CurrentExchange/ConverterExchangeContainer';
+const ConverterExchangeContainer = React.lazy(() => import('./component/CurrentExchange/ConverterExchangeContainer'));
+
+
 
 const App = () => {
   return (
@@ -17,9 +19,10 @@ const App = () => {
         </div>
         <div className="exchange__wrapper">
           <Routes>
-            <Route exact path='/' element = {<ConverterContainer/>} />
-            <Route exact path='/converter' element = {<ConverterContainer/>} />
-            <Route exact path='/currentExchange' element = { <ConverterExchangeContainer/> } />
+            <Route exact path='/' element = {<Suspense fallback={<div>LOADING...</div>}><ConverterContainer/></Suspense>} />
+            <Route />
+            <Route exact path='/converter' element = {<Suspense fallback={<div>LOADING...</div>}><ConverterContainer/></Suspense>} />
+            <Route exact path='/currentExchange' element = {<Suspense fallback={<div>LOADING...</div>}><ConverterExchangeContainer/></Suspense>} />
           </Routes>
         </div>
       </div>

@@ -1,6 +1,6 @@
 .header__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 15px;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
@@ -9,9 +9,6 @@
 .header__wrapper_item {
     display: flex;
     align-items: center;
-}
-.header__wrapper_item:nth-child(2) {
-    width: 50%;
 }
 .logo {
     width: 70px;

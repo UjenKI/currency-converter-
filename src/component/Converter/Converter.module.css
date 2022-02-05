@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 45px;
 }
 .converter__item__error{
     display: block;
@@ -36,15 +37,17 @@
 }
 .converter__item input,
 .converter__item__error input {
-    padding: 5px 22px;
+    padding: 15px 22px;
     border: 1px solid #D4CCE0;
     background: #F4F2F5;
     border-radius: 4px;
-    color: #19003A;
+    color: rgb(83, 83, 83);
     font-weight: normal;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 24px;
     transition: 0.3s ease-in;
+    width: 251px;
+    font-weight: 700;
 }
 .converter__item input.validate_error,
 .converter__item__error input.validate_error{
@@ -62,4 +65,21 @@
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+.exchange__btn:hover { 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+h1{
+    text-align: center;
+}
+.converter__wrapper>p{
+    font-size: 17px;
+    color: rgb(158, 157, 158);
+    text-align: center;
+}
+.converter__wrapper>p span{
+    font-size: 17px;
+    color: rgb(109, 108, 108);
+    font-weight: 700;
 }

@@ -10,7 +10,7 @@ import { setBaseCurrencyExchangeAC, setExchangeRateOptionsAC, setBaseSelectOptio
 class BaseCurrencyContainer extends Component {
 
     componentDidMount(){
-        axios.get(`https://v6.exchangerate-api.com/v6/7120f8b4af81731db296136f/latest/USD`)
+        axios.get(`https://v6.exchangerate-api.com/v6/7120f8b4af81731db296136f/latest/AWG`)
             .then(res => {
                 this.props.setExchangeRateOptions(res.data);
                 this.props.setBaseSelectOptions(res.data);

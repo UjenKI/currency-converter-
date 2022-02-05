@@ -20,9 +20,12 @@ const BaseCurrency = (props) => {
 
     return (
         <div className={style.base__wrapper}>
-            <select onChange={ setBaseCurrency } name="exchangeRate" id="exchangeRate">
-                { Options }
-            </select>
+            <div className={style.select__module}>
+                <h2>Select base currency</h2>
+                <select onChange={ setBaseCurrency } name="exchangeRate" id="exchangeRate">
+                    { Options }
+                </select>
+            </div>
         </div>
     )
 }

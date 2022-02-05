@@ -1,1 +1,37 @@
-.base__wrapper{}
+.base__wrapper{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.select__module{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px 15px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+h2 {
+    text-align: center;
+}
+.select__module select {
+    margin-left: 0;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-height: 36px;
+    font-size: 16px;
+    font-weight: 500;
+}

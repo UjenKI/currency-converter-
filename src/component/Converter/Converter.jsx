@@ -16,7 +16,7 @@ console.log(props)
 
     let getInputDataValue = (e) => {
 
-        // resetData();
+        resetData();
 
         let inputAmountMoney = e.target.value;
 
@@ -85,9 +85,9 @@ console.log(props)
     return (
         <div className={style.converter__wrapper}>
             <h1>Converter</h1>
+            <p>Enter data in the text field in the format - <span>"15 usd in uah"</span></p>
             <div className={style.converter}>
                 <div className={state.isValidationError == false ? style.converter__item : style.converter__item__error}>
-                    <label htmlFor="inputValue">Base:</label>
                     <input id="inputValue" className={state.isValidationError == false ? '' : style.validate_error} onChange={ getInputDataValue } type="text" placeholder="Enter the amount of money" />
                 </div>
                 <button onClick={exchangeAmountMoney} className={style.exchange__btn}>CONVERT</button>
