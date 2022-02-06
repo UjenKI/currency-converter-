@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import BaseCurrency from './BaseCurrency';
 
-import { setBaseCurrencyExchangeAC, setExchangeRateOptionsAC, setBaseSelectOptionsAC } from '../../redux/baseCurrencyReducer';
+import { setBaseCurrencyExchange, setExchangeRateOptions, setBaseSelectOptions } from '../../redux/baseCurrencyReducer';
 
 class BaseCurrencyContainer extends Component {
 
@@ -30,18 +30,8 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setBaseCurrencyExchange: (baseCurrencyExchange) => {
-            dispatch(setBaseCurrencyExchangeAC(baseCurrencyExchange))
-        },
-        setExchangeRateOptions: (baseExchangeRate) => {
-            dispatch(setExchangeRateOptionsAC(baseExchangeRate))
-        },
-        setBaseSelectOptions: (baseRates) => {
-            dispatch(setBaseSelectOptionsAC(baseRates))
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(BaseCurrencyContainer);
+export default connect(mapStateToProps, {
+    setBaseCurrencyExchange,
+    setExchangeRateOptions,
+    setBaseSelectOptions
+})(BaseCurrencyContainer);

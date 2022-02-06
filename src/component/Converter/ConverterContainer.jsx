@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
-// import Converter from './Converter';
 import ConverterPage from './ConverterPage';
 
-import { changeValidateErrorAC, changeToggleFetchingAC, updateOutputValueAC, updateInputValueAC, setExchangeRateAC, setInputCurrencyAC, setOutputCurrencyAC, setSelectOptionsAC} from '../../redux/converterReducer';
+import { changeValidateError, changeToggleFetching, updateOutputValue, updateInputValue, setExchangeRate, setInputCurrency, setOutputCurrency, setSelectOptions} from '../../redux/converterReducer';
 
 class ConverterContainer extends Component {
 
@@ -42,34 +41,13 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        changeValidateError: () => {
-            dispatch(changeValidateErrorAC());
-        },
-        changeToggleFetching: () => {
-            dispatch(changeToggleFetchingAC());
-        },
-        setExchangeRate: (exchangeRate) => {
-            dispatch(setExchangeRateAC(exchangeRate));
-        },
-        setInputCurrency: (inputCurrency) => {
-            dispatch(setInputCurrencyAC(inputCurrency));
-        },
-        setOutputCurrency: (outputCurrency) => {
-            dispatch(setOutputCurrencyAC(outputCurrency));
-        },
-        updateInputValue: (inputValue) => {
-            dispatch(updateInputValueAC(inputValue));
-        },
-        updateOutputValue: (inputValue) => {
-            dispatch(updateOutputValueAC(inputValue));
-        },
-        setSelectOptions: (options) => {
-            dispatch(setSelectOptionsAC(options));
-        }
-    }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(ConverterContainer);
+export default connect(mapStateToProps, {
+    changeValidateError,
+    changeToggleFetching,
+    setExchangeRate,
+    setInputCurrency,
+    setOutputCurrency,
+    updateInputValue,
+    updateOutputValue,
+    setSelectOptions
+})(ConverterContainer);

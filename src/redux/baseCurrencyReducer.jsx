@@ -39,8 +39,8 @@ const baseCurrencyReducer = (state = initialState, action) => {
     }
 }
 
-export const setBaseCurrencyExchangeAC = (baseCurrencyExchange) => ({type: SET_BASE_CURRENCY_EXCHANGE, baseCurrencyExchange});
-export const setExchangeRateOptionsAC = (baseExchangeRate) => ({type: SET_EXCHANGE_RATE_OPTIONS, baseExchangeRate});
-export const setBaseSelectOptionsAC = (baseRates) => ({type: SET_BASE_SELECT_OPTIONS, baseRates});
+export const setBaseCurrencyExchange = (baseCurrencyExchange) => ({type: SET_BASE_CURRENCY_EXCHANGE, baseCurrencyExchange});
+export const setExchangeRateOptions = (baseExchangeRate) => ({type: SET_EXCHANGE_RATE_OPTIONS, baseExchangeRate});
+export const setBaseSelectOptions = (baseRates) => ({type: SET_BASE_SELECT_OPTIONS, baseRates});
 
 export default baseCurrencyReducer;

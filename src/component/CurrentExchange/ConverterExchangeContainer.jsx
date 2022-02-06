@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import ConverterExchange from './ConverterExchange';
 
-import { setRateForElemAC, setExchangeRateAC, setBaseCurrencyAC, setSelectOptionsAC } from '../../redux/exchangeRateReducer';
+import { setRateForElem, setExchangeRate, setBaseCurrency, setSelectOptions } from '../../redux/exchangeRateReducer';
 
 class ConverterExchangeContainer extends Component {
 
@@ -45,21 +45,9 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setRateForElem: (rateForElem) => {
-            dispatch(setRateForElemAC(rateForElem))
-        },
-        setSelectOptions: (rates) => {
-            dispatch(setSelectOptionsAC(rates))
-        },
-        setExchangeRate: (exchangeRate) => {
-            dispatch(setExchangeRateAC(exchangeRate))
-        },
-        setBaseCurrency: (baseCurrency) => {
-            dispatch(setBaseCurrencyAC(baseCurrency))
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ConverterExchangeContainer)
+export default connect(mapStateToProps, {
+    setRateForElem,
+    setSelectOptions,
+    setExchangeRate,
+    setBaseCurrency
+})(ConverterExchangeContainer)

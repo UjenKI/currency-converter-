@@ -62,10 +62,10 @@ const exchangeRatePageReducer = (state = initialState, action) => {
     }
 }
 
-export const setRateForElemAC = (rateForElem) => ({type: SET_RATE_FOR_ELEM, rateForElem})
-export const setSelectOptionsAC = (rates) => ({type:SET_SELECT_OPTIONS_CURRENCY, rates});
-export const setExchangeRateAC = (exchangeRate) => ({type: SET_EXCHANGE_RATE, exchangeRate});
-export const setBaseCurrencyAC = (baseCurrency) => ({type: SET_BASE_CURRENCY, baseCurrency});
-export const setToggleFetchingAC = (isFetching) => ({ type: SET_TOGGLE_FETCHING, isFetching });
+export const setRateForElem = (rateForElem) => ({type: SET_RATE_FOR_ELEM, rateForElem})
+export const setSelectOptions = (rates) => ({type:SET_SELECT_OPTIONS_CURRENCY, rates});
+export const setExchangeRate = (exchangeRate) => ({type: SET_EXCHANGE_RATE, exchangeRate});
+export const setBaseCurrency = (baseCurrency) => ({type: SET_BASE_CURRENCY, baseCurrency});
+export const setToggleFetching = (isFetching) => ({ type: SET_TOGGLE_FETCHING, isFetching });
 
 export default exchangeRatePageReducer;

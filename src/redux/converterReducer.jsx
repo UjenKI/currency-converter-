@@ -84,13 +84,13 @@ const converterPageReducer = (state = initialState, action) => {
     }
 }
 
-export const changeValidateErrorAC = () => ({type: CHANGE_VALIDATE_ERROR});
-export const changeToggleFetchingAC = () => ({type: CHANGE_TOGGLE_FETCHING});
-export const setSelectOptionsAC = (options) => ({type: SET_SELECT_OPTIONS, options});
-export const updateInputValueAC = (amountMoney) => ({type: UPDATE_INPUT_VALUE, amountMoney});
-export const updateOutputValueAC = (amountMoney) => ({type: UPDATE_OUTPUT_VALUE, amountMoney});
-export const setExchangeRateAC = (exchangeRate) => ({type: SET_EXCHANGE_RATE, exchangeRate});
-export const setInputCurrencyAC = (inputCurrency) => ({type: SET_INPUT_CURRENCY, inputCurrency});
-export const setOutputCurrencyAC = (outputCurrency) => ({type: SET_OUTPUT_CURRENCY, outputCurrency});
+export const changeValidateError = () => ({type: CHANGE_VALIDATE_ERROR});
+export const changeToggleFetching = () => ({type: CHANGE_TOGGLE_FETCHING});
+export const setSelectOptions = (options) => ({type: SET_SELECT_OPTIONS, options});
+export const updateInputValue = (amountMoney) => ({type: UPDATE_INPUT_VALUE, amountMoney});
+export const updateOutputValue = (amountMoney) => ({type: UPDATE_OUTPUT_VALUE, amountMoney});
+export const setExchangeRate = (exchangeRate) => ({type: SET_EXCHANGE_RATE, exchangeRate});
+export const setInputCurrency = (inputCurrency) => ({type: SET_INPUT_CURRENCY, inputCurrency});
+export const setOutputCurrency = (outputCurrency) => ({type: SET_OUTPUT_CURRENCY, outputCurrency});
 
 export default converterPageReducer;
